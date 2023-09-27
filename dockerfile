@@ -6,6 +6,6 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY --from=BUILD /app/target/JBS-POC-master-0.0.1-SNAPSHOT.jar pedrosa.jar
+COPY --from=BUILD /app/target/JBS-0.0.1-SNAPSHOT.jar pedrosa.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "pedrosa.jar"]
